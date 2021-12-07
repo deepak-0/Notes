@@ -1,0 +1,41 @@
+1.for Ansible configuration
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+-------------------------------------------------------------------------------------
+2.ssh-keygen // setting up password less Authentication from CN to nodes
+3.ssh-copy-id  username@ipadressofnode  (on master) //(username of node and ip address of node)
+4.ifconfig – ip address details
+5.sudo systemctl status ssh // status of system ssh
+6.sudo systemctl status ssh
+7.sudo apt update
+8.sudo apt install openssh-server
+9.ssh-copy-id thbs_admin@192.168.81.131  //  clientidand ipaddress
+10.ansible all -m ping 
+11.gedit etc/ansible/hosts // to open hosts
+12.ansible -i file -m setup hostgroup // gather info of node
+13.ansible prod  -m copy -a 'src=/etc/ansible/hosts dest=/tmp’
+//to send hosts file from master to node
+
+14.create file using adhoc file in node:
+ansible -m file -a 'path=/tmp/deepak.txt state=touch' all 
+15.delete file using adhoc file in node:
+ansible -m file -a 'path=/tmp/deepak.txt state=absent' all 
+16.ansible-playbook playbook_name.yml // execute playbook
+17.to check the syntax of the yml playbook:
+ansible-playbook playbook_name.yml –syntax-check
+18.become : yes // root user execute in yaml
+19.add -K or --ask-become-pass // after the command for password 
+20.encrypt playbook content:
+ansible-vault encrypt playbook_name.yml  // for existing playbook
+ansible-vault create playbook_name.yml // for new playbook
+ 
+21.decrypt  :
+ansible-vault decrypt playbook_name.yml
+ansible-vault view playbook_name.yml // view content
+
+22.change password:
+ansible-vault rekey playbook_name.txt
+
+23.ansible-galaxy init role_name // creating roles 

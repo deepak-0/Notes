@@ -1,0 +1,46 @@
+1.cd – current directory 
+2.pwd – present working rep
+3.ls – list 
+4.git clone rep_name_link   // clone rep with folder in pc
+5.code . - to link/open repository with VScode editor
+ . means current directory
+
+---------------------------------------
+Version control system
+→ distributed version control - GIT
+→ Central version control 
+----------------------------------------
+6.git config –list  //
+7.git init // create new repository
+8.git add . - staging of files (when done with changes)
+9.git status // status of the file
+10.git commit -m ”Message to be given”
+
+Linking repo to local folder
+11.git remote add <name>(origin) <url>   // do before pushing
+12.git remote -v //to verify 
+13.git push --set-upstream origin master
+14.git branch – gives branch details (current branch)
+15.git checkout branch_name  // change to specific branch 
+16.git fetch // fetches the updated branches from remote repository
+17.git log // gives the track of commits done
+----------------------------------------------
+Temporary Commits
+18.Git stash list // view stash
+19.git stash save “ ” // save temporarily
+20.git stash apply code_id // apply the stash 
+21.git stash pop stash id // will apply the update and delete
+22.git stash drop // will delete directly
+-----------------------------------------------
+23.git checkout -b branch_name  // create and change current branch at same time
+
+fetch – fetch latest change but no merge
+merge – fetch and merge it to repository
+
+24.$ git checkout -b "bug/user-profile_new" origin/main 
+// create branch from current wokking branch in workspace
+
+Stash :
+
+25.git statsh list
+26.git stash apply stash@{0} // statsh id  // temporary save
